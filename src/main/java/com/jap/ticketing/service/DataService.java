@@ -7,5 +7,12 @@
 
 package com.jap.ticketing.service;
 
+import com.jap.ticketing.model.ticket.Model;
+
+import java.util.List;
+
 public class DataService {
+    public List<Model> getSortedDistanceTravelled(List<Model> serviceData) {
+        return null;
+    }
 }
