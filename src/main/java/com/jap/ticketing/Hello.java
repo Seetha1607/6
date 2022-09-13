@@ -21,5 +21,11 @@ public class Hello {
         List<Model> sortedDistanceTravelled = dataService.getSortedDistanceTravelled(modelList);
         // Printing the sortedDistanceTravelled list.
         System.out.println(sortedDistanceTravelled);
+
+        // Calling the getTotalAmountCollected method in the DataService class and passing the modelList as a parameter.
+        int totalAmountCollected = dataService.getTotalAmountCollected(modelList);
+        // Printing the total amount collected.
+        System.out.println("totalAmountCollected = " + totalAmountCollected);
     }
+
 }
