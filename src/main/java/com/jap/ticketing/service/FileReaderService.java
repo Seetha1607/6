@@ -18,10 +18,11 @@ import java.util.List;
 public class FileReaderService {
     public List<Model> readFileLineByLine(String fileName) {
         List<Model> modelList = new ArrayList<>();
-
-        try (FileReader fileReader = new FileReader("src/main/resources/resources/sample.csv")) {
+        fileName = "src/main/resources/resources/sample.csv";
+        try (FileReader fileReader = new FileReader(fileName)) {
             BufferedReader bufferedReader = new BufferedReader(fileReader);
-            String line = bufferedReader.readLine();
+            bufferedReader.readLine();
+            String line;
             while ((line = bufferedReader.readLine()) != null) {
                 String[] split = line.split(",");
                 String scheduleNumber = split[0].trim();
