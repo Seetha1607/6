@@ -10,7 +10,6 @@ package com.jap.ticketing.service;
 import com.jap.ticketing.model.ticket.Model;
 
 import java.util.Comparator;
-import java.util.Iterator;
 import java.util.List;
 
 public class DataService {
@@ -37,9 +36,7 @@ public class DataService {
     public int getTotalAmountCollected(List<Model> modelList) {
         TotalTicket ticket = modelList1 -> {
             int sum = 0;
-            Iterator<Model> iterator = modelList1.iterator();
-            while (iterator.hasNext()) {
-                Model next = iterator.next();
+            for (Model next : modelList1) {
                 sum = sum + next.getTotalTicketAmount();
             }
             return sum;

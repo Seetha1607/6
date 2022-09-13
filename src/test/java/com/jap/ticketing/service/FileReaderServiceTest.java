@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.text.ParseException;
 import java.util.List;
 
 class FileReaderServiceTest {
@@ -24,7 +23,7 @@ class FileReaderServiceTest {
     }
 
     @Test
-    public void readFileLineByLineSuccess() throws ParseException {
+    public void readFileLineByLineSuccess() {
         List<Model> expectedOutput = fileReaderService.readFileLineByLine(fileName);
         Assertions.assertEquals(49, expectedOutput.size());
     }

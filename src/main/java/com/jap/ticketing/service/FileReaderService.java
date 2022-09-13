@@ -18,7 +18,6 @@ import java.util.List;
 public class FileReaderService {
     public List<Model> readFileLineByLine(String fileName) {
         List<Model> modelList = new ArrayList<>();
-        fileName = "src/main/resources/resources/sample.csv";
         try (FileReader fileReader = new FileReader(fileName)) {
             BufferedReader bufferedReader = new BufferedReader(fileReader);
             bufferedReader.readLine();

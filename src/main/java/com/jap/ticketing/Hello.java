@@ -27,5 +27,4 @@ public class Hello {
         // Printing the total amount collected.
         System.out.println("totalAmountCollected = " + totalAmountCollected);
     }
-
 }
