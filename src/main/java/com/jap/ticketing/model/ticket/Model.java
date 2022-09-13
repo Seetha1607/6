@@ -7,6 +7,9 @@
 
 package com.jap.ticketing.model.ticket;
 
+import java.util.Objects;
+import java.util.StringJoiner;
+
 public class Model {
 
     private String scheduleNumber;
@@ -114,5 +117,23 @@ public class Model {
 
     public void setTravelledKm(double travelledKm) {
         this.travelledKm = travelledKm;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Model model = (Model) o;
+        return ticketStopFromId == model.ticketStopFromId && ticketFromStopSequenceNumber == model.ticketFromStopSequenceNumber && ticketTillStopId == model.ticketTillStopId && ticketTillStopSeqNo == model.ticketTillStopSeqNo && totalTicketAmount == model.totalTicketAmount && Double.compare(model.travelledKm, travelledKm) == 0 && Objects.equals(scheduleNumber, model.scheduleNumber) && Objects.equals(routeNumber, model.routeNumber) && Objects.equals(ticketDate, model.ticketDate) && Objects.equals(ticketTime, model.ticketTime);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(scheduleNumber, routeNumber, ticketStopFromId, ticketFromStopSequenceNumber, ticketTillStopId, ticketTillStopSeqNo, ticketDate, ticketTime, totalTicketAmount, travelledKm);
+    }
+
+    @Override
+    public String toString() {
+        return new StringJoiner(", ", Model.class.getSimpleName() + "[", "]").add("scheduleNumber='" + scheduleNumber + "'").add("routeNumber='" + routeNumber + "'").add("ticketStopFromId=" + ticketStopFromId).add("ticketFromStopSequenceNumber=" + ticketFromStopSequenceNumber).add("ticketTillStopId=" + ticketTillStopId).add("ticketTillStopSeqNo=" + ticketTillStopSeqNo).add("ticketDate='" + ticketDate + "'").add("ticketTime='" + ticketTime + "'").add("totalTicketAmount=" + totalTicketAmount).add("travelledKm=" + travelledKm).toString();
     }
 }
