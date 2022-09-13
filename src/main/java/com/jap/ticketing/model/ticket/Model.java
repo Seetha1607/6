@@ -20,4 +20,28 @@ public class Model {
     private int totalTicketAmount;
     private double travelledKm;
 
+    public Model() {
+    }
+
+    public Model(String scheduleNumber,
+                 String routeNumber,
+                 int ticketStopFromId,
+                 int ticketFromStopSequenceNumber,
+                 int ticketTillStopId,
+                 int ticketTillStopSeqNo,
+                 String ticketDate,
+                 String ticketTime,
+                 int totalTicketAmount,
+                 double travelledKm) {
+        this.scheduleNumber = scheduleNumber;
+        this.routeNumber = routeNumber;
+        this.ticketStopFromId = ticketStopFromId;
+        this.ticketFromStopSequenceNumber = ticketFromStopSequenceNumber;
+        this.ticketTillStopId = ticketTillStopId;
+        this.ticketTillStopSeqNo = ticketTillStopSeqNo;
+        this.ticketDate = ticketDate;
+        this.ticketTime = ticketTime;
+        this.totalTicketAmount = totalTicketAmount;
+        this.travelledKm = travelledKm;
+    }
 }
