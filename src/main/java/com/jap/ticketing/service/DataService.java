@@ -14,6 +14,12 @@ import java.util.Iterator;
 import java.util.List;
 
 public class DataService {
+    /**
+     * It takes a list of Model objects, sorts them by the distance travelled, and returns the sorted list
+     *
+     * @param serviceData The list of objects that you want to sort.
+     * @return A list of Model objects sorted by the distance travelled.
+     */
     public List<Model> getSortedDistanceTravelled(List<Model> serviceData) {
         Comparator<Model> distanceComparator = (((o1, o2) -> Double.compare(o2.getTravelledKm(), o1.getTravelledKm())));
         serviceData.sort(distanceComparator);
